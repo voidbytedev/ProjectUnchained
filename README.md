@@ -1,9 +1,9 @@
 # ProjectUnchained
 
 ## USAGE
-**SERVER_URL**: The proxy location
+**SERVER_URL**: The proxy location (local default is `http://localhost:6767`)
 
-**WEBSITE_URL**: Full HTTP/HTTPS link of the webpage you would like to visit. You can put a tilde (~) in some spots if your environment blocks by the URL. (e.g. http://example.com/ -> http://ex~am~ple.c~om)
+**WEBSITE_URL**: Full HTTP/HTTPS link of the webpage you would like to visit. You can put a tilde (~) in some spots if your environment blocks by the URL. (e.g. `http://example.com/` -> `http://ex~am~ple.com`)
 
 ### Most users:
 To use the proxy to unblock all parts of a webpage, go to the URL `SERVER_URL/p/WEBSITE_URL/`
