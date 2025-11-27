@@ -28,3 +28,6 @@ To replace the text in a string with unicode lookalikes, send a POST request to 
 
 # Credits
 **voidbytedev** - original project
+
+# NOTE
+**I do not hold any responsibility for if your boss or teachers see you on games instead of doing work because of this. Also I can't make readable code lol -voidbytedev**
