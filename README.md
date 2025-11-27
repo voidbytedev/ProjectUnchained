@@ -20,4 +20,4 @@ To unblock all parts of HTML, send a POST request to `SERVER_URL/h/` with the fo
 This can be used for making sites that work in restricted environments without needing a proxy.
 
 # Credits
-**The Nullbit Team (TNT)** - original project
+**voidbytedev** - original project
