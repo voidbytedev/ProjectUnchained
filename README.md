@@ -26,6 +26,22 @@ To replace the text in a string with unicode lookalikes, send a POST request to 
 }
 ```
 
+# RUNNING
+### Bash
+```
+# Create a virtual environment
+python3 -m venv venv
+
+# Activate the virtual environment
+source venv/bin/activate
+
+# Install Requirements
+pip install -r requirements.txt
+
+# Start proxy at http://localhost:6767/
+python proxy.py
+```
+
 # Credits
 **voidbytedev** - original project
 
