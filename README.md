@@ -19,5 +19,12 @@ To unblock all parts of HTML, send a POST request to `SERVER_URL/h/` with the fo
 ```
 This can be used for making sites that work in restricted environments without needing a proxy.
 
+To replace the text in a string with unicode lookalikes, send a POST request to `SERVER_URL/t/` with the following JSON:
+```
+{
+    "text": "TEXT HERE"
+}
+```
+
 # Credits
 **voidbytedev** - original project
