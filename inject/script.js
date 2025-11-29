@@ -52,53 +52,43 @@ function filterInputValues() {
         }
 
 function getPath(url) {
-    // Define the base URL
     const baseUrl = `${SERVER_URL}/p/`;
 
-    // Check if the URL starts with the base URL
     if (url.startsWith(baseUrl)) {
-        // Extract the path following the base URL
         let path = url.slice(baseUrl.length);
 
-        // Remove any query parameters
         const questionMarkIndex = path.indexOf('?');
         if (questionMarkIndex !== -1) {
             path = path.slice(0, questionMarkIndex);
         }
 
-        return path; // Return the cleaned path
+        return path;
     }
     
-    return null; // Return null if the URL doesn't match
+    return null;
 }
 
 function rel2abs(link, originalURL) {
     const baseUrl = `${SERVER_URL}/p/`;
 
-    // Check if the link is a valid non-empty string
     if (link && typeof link === 'string') {
         try {
-            // Check if the link is absolute
             const url = new URL(link);
-            // If it's absolute, return it as is
             return url.toString(); 
         } catch {
-            // If it's not a valid absolute URL, proceed to treat it as a relative path
-            // Create the absolute URL
             const newBaseURL = new URL(originalURL, baseUrl).toString();
             const absoluteUrl = new URL(link, newBaseURL).toString();
 
-            // Before returning, cut off any query parameters
             const questionMarkIndex = absoluteUrl.indexOf('?');
             if (questionMarkIndex !== -1) {
-                return absoluteUrl.slice(0, questionMarkIndex); // Return the URL before the '?'
+                return absoluteUrl.slice(0, questionMarkIndex);
             }
 
-            return absoluteUrl; // Return the full absolute URL if no query
+            return absoluteUrl;
         }
     }
 
-    return null; // Return null for invalid inputs
+    return null;
 }
 
 function filterIFrame(e) {
@@ -119,16 +109,16 @@ function filterIFrame(e) {
                         if (!response.ok) {
                             throw new Error('Network response was not ok ' + response.statusText);
                         }
-                        return response.json(); // Parse tFUCK YOU FUCK YOU FUCK YOU KYS KYS KYS
+                        return response.json();
                     })
                     .then(data => {
-                        console.log('Success:', data); // Handle the response data
+                        console.log('Success:', data);
                         doc.open();
                         doc.write(data);
                         doc.close();
                     })
                     .catch(error => {
-                        console.error('Error:', error); // Handle errors
+                        console.error('Error:', error);
                     });
                 }
 }
